@@ -32,6 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['codestar2023-01-0cbcd6f9fd23.herokuapp.com', 'localhost', '8000-kdeane87-ithinktherefor-7imp7kh73f2.ws-eu105.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-kdeane87-ithinktherefor-7imp7kh73f2.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -50,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'blog',
 ]
 
@@ -59,6 +62,9 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
